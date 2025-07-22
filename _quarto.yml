@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Macro Dashboard"
+  title: "JK Capital"
   navbar:
     left:
       - href: index.qmd
@@ -12,6 +12,20 @@ website:
         text: About
       - href: Macro_Model.qmd
         text: Macro Model
+      - text: Capital Markets
+        menu:
+          - href: screener.qmd
+            text: Stock Screener
+          - href: equity_research.qmd
+            text: Equity Research
+          - href: resources.qmd
+            text: Resources
+      - text: Sports
+        menu:
+          - href: EU_football.qmd
+            text: European Football
+          - href: MLB_baseball.qmd
+            text: Major League Baseball
 
 format:
   html:

@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Taehwan (Jack) Kim"
 image: images/thjk_2024.jpg
 about:
   template: trestles
@@ -12,4 +12,4 @@ about:
       href: thkim010325@gmail.com
 ---
 
-Greetings! I'm Jack. Student at Pomona College, lifelong athlete, and an aspiring value investor. This is a space to think independetly and put turn them into tangible models.
+Greetings! I'm Jack. Student at Pomona College, lifelong athlete, and an aspiring value investor. This is a space to think independetly and turn them into tangible models.
