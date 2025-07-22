@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Taehwan (Jack) Kim",
+    "section": "",
+    "text": "Greetings! My name is Jack Kim, a senior at Pomona College studying Economics and Math. An aspiring value investor, I believe in developing independent analysis and testing them with simplified models. This is an ongoing process. In my limited experience in finance and investing, I have had the privilege of meeting distinguished individuals who have all inspired me embark on this challenge myself. To complement my limited professional experience, I have become an avid reader and a student of history. I say this with humility, but I believe this space could mark the start of a long-term journey toward launching my own fund.\nRecently, I have come to the understanding that sports is an inseparable part of who I am. While I have been a lifelong athlete, I have realized that my true passion lies in studying sports, more so than taking a part in them. This acknowledgement has motivated to pursue interesting side gigs - European football analysis and Sabermetrics. This is a chance to flex background in econometrics to drive real-time sports innovation."
+  },
+  {
+    "objectID": "Macro_Model.html",
+    "href": "Macro_Model.html",
+    "title": "Macro Dashboard",
+    "section": "",
+    "text": "library(fredr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(zoo)\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggplot2)\nlibrary(lubridate)\nlibrary(readxl)\nlibrary(tidyr)\nlibrary(tidyquant)\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfredr_set_key(\"da613fe30b4aba9f426b578cc2e5d192\")"
+  },
+  {
+    "objectID": "Macro_Model.html#introduction",
+    "href": "Macro_Model.html#introduction",
+    "title": "Macro Dashboard",
+    "section": "",
+    "text": "library(fredr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(zoo)\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggplot2)\nlibrary(lubridate)\nlibrary(readxl)\nlibrary(tidyr)\nlibrary(tidyquant)\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfredr_set_key(\"da613fe30b4aba9f426b578cc2e5d192\")"
+  },
+  {
+    "objectID": "Macro_Model.html#productivity-growth",
+    "href": "Macro_Model.html#productivity-growth",
+    "title": "Macro Dashboard",
+    "section": "Productivity Growth",
+    "text": "Productivity Growth\nFred version\n\n# Download Real GDP per capita data from FRED\nFred_gdp_per_capita &lt;- tq_get(\"A939RX0Q048SBEA\", get = \"economic.data\", from = \"1947-01-01\")\n\n# Calculate Year-over-Year (YoY) percentage growth\nFred_gdp_per_capita &lt;- Fred_gdp_per_capita %&gt;%\n  mutate(yoy_growth = (price / lag(price, 4) - 1) * 100)\n\n# Plot the YoY growth\nFred_gdp_per_capita %&gt;%\n  ggplot(aes(x = date, y = yoy_growth)) +\n  geom_line(color = \"blue\", size = 1) +\n  labs(title = \"US Real GDP per Capita: YoY Growth (%)\",\n       subtitle = \"Source: FRED (A939RX0Q048SBEA)\",\n       x = \"Date\", y = \"YoY % Growth\") +\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: Removed 4 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\nlibrary(readxl)\nlibrary(dplyr)\nlibrary(ggplot2)\n\n# Read GDPpc sheet using the correct header row (row 3)\nmaddison_us_gdppc2023 &lt;- read_excel(\"maddison_project_2023db.xlsx\", sheet = \"GDPpc\", skip = 2)\n\n# Extract year and USA GDP per capita\nus_gdp_yoy &lt;- maddison_us_gdppc2023 %&gt;%\n  select(year, real_gdp_per_capita = USA) %&gt;%\n  filter(year &gt;= 1800) %&gt;%\n  mutate(\n    real_gdp_per_capita = as.numeric(real_gdp_per_capita),\n    yoy_growth = (real_gdp_per_capita / lag(real_gdp_per_capita) - 1) * 100\n  ) %&gt;%\n  filter(!is.na(yoy_growth))\n\n# Plot YoY growth\nggplot(us_gdp_yoy, aes(x = year, y = yoy_growth)) +\n  geom_line(color = \"steelblue\", size = 1) +\n  labs(\n    title = \"US Real GDP per Capita: Year-over-Year Growth (%)\",\n    subtitle = \"Source: Maddison Project Database (2023, GDPpc sheet)\",\n    x = \"Year\", y = \"YoY % Growth\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)\n\nlibrary(ggplot2)\n\n# Plot real GDP per capita (level, not YoY)\nggplot(us_gdp_yoy, aes(x = year, y = real_gdp_per_capita)) +\n  geom_line(color = \"darkgreen\", size = 1) +\n  labs(\n    title = \"US Real GDP per Capita (2011 USD, Maddison Data)\",\n    subtitle = \"Source: Maddison Project Database (2023, GDPpc sheet)\",\n    x = \"Year\", y = \"Real GDP per Capita\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "Macro_Model.html#short-term-debt-cycle",
+    "href": "Macro_Model.html#short-term-debt-cycle",
+    "title": "Macro Dashboard",
+    "section": "Short-Term Debt Cycle",
+    "text": "Short-Term Debt Cycle"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -40,40 +75,5 @@
     "title": "About",
     "section": "Military Experience",
     "text": "Military Experience\nRepublic of Korea Army - 2nd Corps Headquarters"
-  },
-  {
-    "objectID": "Macro_Model.html",
-    "href": "Macro_Model.html",
-    "title": "Macro Dashboard",
-    "section": "",
-    "text": "library(fredr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(zoo)\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggplot2)\nlibrary(lubridate)\nlibrary(readxl)\nlibrary(tidyr)\nlibrary(tidyquant)\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfredr_set_key(\"da613fe30b4aba9f426b578cc2e5d192\")"
-  },
-  {
-    "objectID": "Macro_Model.html#introduction",
-    "href": "Macro_Model.html#introduction",
-    "title": "Macro Dashboard",
-    "section": "",
-    "text": "library(fredr)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(zoo)\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggplot2)\nlibrary(lubridate)\nlibrary(readxl)\nlibrary(tidyr)\nlibrary(tidyquant)\n\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfredr_set_key(\"da613fe30b4aba9f426b578cc2e5d192\")"
-  },
-  {
-    "objectID": "Macro_Model.html#productivity-growth",
-    "href": "Macro_Model.html#productivity-growth",
-    "title": "Macro Dashboard",
-    "section": "Productivity Growth",
-    "text": "Productivity Growth\nFred version\n\n# Download Real GDP per capita data from FRED\nFred_gdp_per_capita &lt;- tq_get(\"A939RX0Q048SBEA\", get = \"economic.data\", from = \"1947-01-01\")\n\n# Calculate Year-over-Year (YoY) percentage growth\nFred_gdp_per_capita &lt;- Fred_gdp_per_capita %&gt;%\n  mutate(yoy_growth = (price / lag(price, 4) - 1) * 100)\n\n# Plot the YoY growth\nFred_gdp_per_capita %&gt;%\n  ggplot(aes(x = date, y = yoy_growth)) +\n  geom_line(color = \"blue\", size = 1) +\n  labs(title = \"US Real GDP per Capita: YoY Growth (%)\",\n       subtitle = \"Source: FRED (A939RX0Q048SBEA)\",\n       x = \"Date\", y = \"YoY % Growth\") +\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: Removed 4 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\nlibrary(readxl)\nlibrary(dplyr)\nlibrary(ggplot2)\n\n# Read GDPpc sheet using the correct header row (row 3)\nmaddison_us_gdppc2023 &lt;- read_excel(\"maddison_project_2023db.xlsx\", sheet = \"GDPpc\", skip = 2)\n\n# Extract year and USA GDP per capita\nus_gdp_yoy &lt;- maddison_us_gdppc2023 %&gt;%\n  select(year, real_gdp_per_capita = USA) %&gt;%\n  filter(year &gt;= 1800) %&gt;%\n  mutate(\n    real_gdp_per_capita = as.numeric(real_gdp_per_capita),\n    yoy_growth = (real_gdp_per_capita / lag(real_gdp_per_capita) - 1) * 100\n  ) %&gt;%\n  filter(!is.na(yoy_growth))\n\n# Plot YoY growth\nggplot(us_gdp_yoy, aes(x = year, y = yoy_growth)) +\n  geom_line(color = \"steelblue\", size = 1) +\n  labs(\n    title = \"US Real GDP per Capita: Year-over-Year Growth (%)\",\n    subtitle = \"Source: Maddison Project Database (2023, GDPpc sheet)\",\n    x = \"Year\", y = \"YoY % Growth\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)\n\nlibrary(ggplot2)\n\n# Plot real GDP per capita (level, not YoY)\nggplot(us_gdp_yoy, aes(x = year, y = real_gdp_per_capita)) +\n  geom_line(color = \"darkgreen\", size = 1) +\n  labs(\n    title = \"US Real GDP per Capita (2011 USD, Maddison Data)\",\n    subtitle = \"Source: Maddison Project Database (2023, GDPpc sheet)\",\n    x = \"Year\", y = \"Real GDP per Capita\"\n  ) +\n  theme_minimal()"
-  },
-  {
-    "objectID": "Macro_Model.html#short-term-debt-cycle",
-    "href": "Macro_Model.html#short-term-debt-cycle",
-    "title": "Macro Dashboard",
-    "section": "Short-Term Debt Cycle",
-    "text": "Short-Term Debt Cycle"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Taehwan (Jack) Kim",
-    "section": "",
-    "text": "Greetings! I’m Jack. Student at Pomona College, lifelong athlete, and an aspiring value investor. This is a space to think independetly and turn them into tangible models."
   }
 ]
