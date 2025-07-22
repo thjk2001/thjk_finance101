@@ -4,23 +4,73 @@ format: html
 editor: source
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Introduction
 
 ```{r}
-1 + 1
+library(fredr)
+library(dplyr)
+library(zoo)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(readxl)
+library(tidyr)
+library(tidyquant)
+
+fredr_set_key("da613fe30b4aba9f426b578cc2e5d192")
 ```
 
-You can add options to executable code like this
 
+## Productivity Growth
+
+Fred version
 ```{r}
-#| echo: false
-2 * 2
+# Download Real GDP per capita data from FRED
+Fred_gdp_per_capita <- tq_get("A939RX0Q048SBEA", get = "economic.data", from = "1947-01-01")
+
+# Calculate Year-over-Year (YoY) percentage growth
+Fred_gdp_per_capita <- Fred_gdp_per_capita %>%
+  mutate(yoy_growth = (price / lag(price, 4) - 1) * 100)
+
+# Plot the YoY growth
+Fred_gdp_per_capita %>%
+  ggplot(aes(x = date, y = yoy_growth)) +
+  geom_line(color = "blue", size = 1) +
+  labs(title = "US Real GDP per Capita: YoY Growth (%)",
+       subtitle = "Source: FRED (A939RX0Q048SBEA)",
+       x = "Date", y = "YoY % Growth") +
+  theme_minimal()
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+Maddison Project version
+```{r}
+library(readxl)
+library(dplyr)
+library(ggplot2)
+
+# Read GDPpc sheet using the correct header row (row 3)
+maddison_us_gdppc2023 <- read_excel("maddison_project_2023db.xlsx", sheet = "GDPpc", skip = 2)
+
+# Extract year and USA GDP per capita
+us_gdp_yoy <- maddison_us_gdppc2023 %>%
+  select(year, real_gdp_per_capita = USA) %>%
+  filter(year >= 1800) %>%
+  mutate(
+    real_gdp_per_capita = as.numeric(real_gdp_per_capita),
+    yoy_growth = (real_gdp_per_capita / lag(real_gdp_per_capita) - 1) * 100
+  ) %>%
+  filter(!is.na(yoy_growth))
+
+# Plot YoY growth
+ggplot(us_gdp_yoy, aes(x = year, y = yoy_growth)) +
+  geom_line(color = "steelblue", size = 1) +
+  labs(
+    title = "US Real GDP per Capita: Year-over-Year Growth (%)",
+    subtitle = "Source: Maddison Project Database (2023, GDPpc sheet)",
+    x = "Year", y = "YoY % Growth"
+  ) +
+  theme_minimal()
+
+```
+
+
