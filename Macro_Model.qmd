@@ -1,6 +1,6 @@
 ---
 title: "Macro Dashboard"
-format: pdf
+format: html
 editor: source
 ---
 
