@@ -8,6 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: about.qmd
+        text: About
+      - href: Macro_Model.qmd
+        text: Macro Model
 
 format:
   html:
@@ -15,9 +19,3 @@ format:
     toc: true
     css: styles.css
 
-navbar:
-  left:
-    - href: index.qmd
-      text: Home
-    - href: about.qmd
-      text: About
