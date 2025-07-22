@@ -4,6 +4,7 @@ format: html
 editor: source
 ---
 
+
 ## Introduction
 
 ```{r}
@@ -73,4 +74,27 @@ ggplot(us_gdp_yoy, aes(x = year, y = yoy_growth)) +
 
 ```
 
+
+Supplement: Real GPD per capita (actual figures)
+```{r}
+library(ggplot2)
+
+# Plot real GDP per capita (level, not YoY)
+ggplot(us_gdp_yoy, aes(x = year, y = real_gdp_per_capita)) +
+  geom_line(color = "darkgreen", size = 1) +
+  labs(
+    title = "US Real GDP per Capita (2011 USD, Maddison Data)",
+    subtitle = "Source: Maddison Project Database (2023, GDPpc sheet)",
+    x = "Year", y = "Real GDP per Capita"
+  ) +
+  theme_minimal()
+
+```
+
+
+## Short-Term Debt Cycle
+
+```{r}
+
+```
 
