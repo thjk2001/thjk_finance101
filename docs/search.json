@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Thjk in a Snapshot…"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nPomona College - Claremont, California, USA\n\nMajor in Economics and Minor in Mathematics\n\nChadwick International School - Incheon, South Korea\n\nFull IB Diploma\nHiger Levels: Language & Literature, Global Politics, History\nStandard Levels: Biology, Math, Spanish\n\nDankook University Affiliate Middle School - Seoul, South Korea\n\n2 years of extremely rigorous grind at the hub of Korean education\nOnly-boys middle school\nEndless hours of private academies (hagwons)\n\nDaedo Elementary School - Seoul, South Korea\n\n5 years of extremely rigorous grind at the hub of Korean education\nEndless hours of private academies (hagwons)\nLex Kim English School\n\nTransit Middle School - Buffalo, New York, USA\n\nWonderful break from Korean education\nA taste of cheerful life in US\n\nCountry Parkway Elementary School - Buffalo, New York, USA\n\nFreedom from Korean education in a peaceful suburban New York"
+  },
+  {
+    "objectID": "about.html#work-experience",
+    "href": "about.html#work-experience",
+    "title": "About",
+    "section": "Work Experience",
+    "text": "Work Experience\nKorea Search Fund\n\nCrucial part of a live deal\nLive buyout deal experience\n\nTortoise Capital Management\n\nDeveloped a passion for value investing\nBirth of a stock guru\nManaging Partner Sull - now my lifelong mentor\n\nKim & Chang Law Firm\n\nExperienced the challenges of M&A deals\nImportance of connections in completing business deals\n\nDoOne Accounting Corporation\n\nEntire global financial system is powered by Excel\nWork, Drink, Work more culture in Korea"
+  },
+  {
+    "objectID": "about.html#activities-achievements",
+    "href": "about.html#activities-achievements",
+    "title": "About",
+    "section": "Activities & Achievements",
+    "text": "Activities & Achievements\nCertified Investment Manager\n\nCertified by Korean Financial Investment Association (KOFIA)"
+  },
+  {
+    "objectID": "about.html#soccer-career",
+    "href": "about.html#soccer-career",
+    "title": "About",
+    "section": "Soccer Career",
+    "text": "Soccer Career\nDaedo Elementary (2012-2013)\nDakook Middle (2014-2015)\nChadwick International Varsity Soccer (2016-2020)\nSongdo FC (2015-2020)\nPomona-Pitzer Varsity Soccer (2020-2022)"
+  },
+  {
+    "objectID": "about.html#military-experience",
+    "href": "about.html#military-experience",
+    "title": "About",
+    "section": "Military Experience",
+    "text": "Military Experience\nRepublic of Korea Army - 2nd Corps Headquarters"
+  },
+  {
     "objectID": "Macro_Model.html",
     "href": "Macro_Model.html",
     "title": "Macro Dashboard",
@@ -26,5 +68,12 @@
     "title": "Macro Dashboard",
     "section": "Short-Term Debt Cycle",
     "text": "Short-Term Debt Cycle"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Greetings! I’m Jack. Student at Pomona College, lifelong athlete, and an aspiring value investor. This is a space to think independetly and put turn them into tangible models."
   }
 ]

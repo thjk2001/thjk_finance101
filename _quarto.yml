@@ -19,3 +19,4 @@ format:
     toc: true
     css: styles.css
 
+editor: source
