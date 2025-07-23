@@ -42,32 +42,18 @@
     "text": "Military Experience\nRepublic of Korea Army - 2nd Corps Headquarters"
   },
   {
-    "objectID": "Macro_Model.html",
-    "href": "Macro_Model.html",
-    "title": "Macro Dashboard",
-    "section": "",
-    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1\n── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
-  },
-  {
-    "objectID": "Macro_Model.html#introduction",
-    "href": "Macro_Model.html#introduction",
-    "title": "Macro Dashboard",
-    "section": "",
-    "text": "Attaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1\n── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
-  },
-  {
     "objectID": "Macro_Model.html#productivity-growth",
     "href": "Macro_Model.html#productivity-growth",
     "title": "Macro Dashboard",
     "section": "Productivity Growth",
-    "text": "Productivity Growth\nFred version\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: Removed 4 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
+    "text": "Productivity Growth\nFred version\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
   },
   {
     "objectID": "Macro_Model.html#short-term-debt-cycle",
     "href": "Macro_Model.html#short-term-debt-cycle",
     "title": "Macro Dashboard",
     "section": "Short-Term Debt Cycle",
-    "text": "Short-Term Debt Cycle\n\nCredit Growth\nTotal Credit to Private Sector\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nHousehold Credit\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nNonfinancial corporate debt\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt/Nominal GDP\n\n\nWarning: Removed 7 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nNominal gdp raw level\n\n\nWarning: Removed 4 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt Outstanding raw level\n\n\n\n\n\n\n\n\n\n\n\nPMI\nNeed to work on this part\n\n\nYield Curve\n\n\n\n\n\n\n\n\n\n2yr and 10yr Raw level\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nU-3 Unemployment (most basic)\n\n\n\n\n\n\n\n\n\nLabor-force participation\n\n\n\n\n\n\n\n\n\nEmployment-population ratio\n\n\n\n\n\n\n\n\n\nBroad Unemployment (U‑6)"
+    "text": "Short-Term Debt Cycle\n\nCredit Growth\nTotal Credit to Private Sector\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nHousehold Credit\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nNonfinancial corporate debt\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt/Nominal GDP\n\n\n\n\n\n\n\n\n\nNominal gdp raw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt Outstanding raw level\n\n\n\n\n\n\n\n\n\n\n\nPMI\nNeed to work on this part\n\n\nYield Curve\n\n\n\n\n\n\n\n\n\n2yr and 10yr Raw level\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nU-3 Unemployment (most basic)\n\n\n\n\n\n\n\n\n\nLabor-force participation\n\n\n\n\n\n\n\n\n\nEmployment-population ratio\n\n\n\n\n\n\n\n\n\nBroad Unemployment (U‑6)"
   },
   {
     "objectID": "Macro_Model.html#long-term-debt-cycle",
@@ -81,7 +67,7 @@
     "href": "index.html",
     "title": "Taehwan (Jack) Kim",
     "section": "",
-    "text": "Greetings! My name is Jack Kim, a senior at Pomona College studying Economics and Math. An aspiring value investor, I believe in developing independent analysis and testing them with simplified models. This is an ongoing process. In my limited experience in finance and investing, I have had the privilege of meeting distinguished individuals who have all inspired me to embark on this challenge myself. To complement my limited professional experience, I have become an avid reader and a student of history. I say this with humility, but I believe this space could mark the start of a long-term journey toward launching my own fund.\nRecently, I have come to the understanding that sports is an inseparable part of who I am. While I have been a lifelong athlete, I have realized that my true passion lies in studying sports, more so than taking a part in them. This acknowledgement has motivated me to pursue some interesting side gigs - European football analysis and Sabermetrics. This is a chance to flex background in econometrics to drive real-time sports innovation."
+    "text": "Greetings! My name is Jack Kim, a senior at Pomona College studying Economics and Math. An aspiring value investor, I believe in developing independent analysis and testing them with simplified models. This is an ongoing process. In my limited experience in finance and investing, I have had the privilege of meeting distinguished individuals who have all inspired me to embark on this challenge myself. To complement my limited professional experience, I have become an avid reader and a student of history. I say this with humility, but I believe this space could mark the start of a long-term journey toward launching my own fund.\nRecently, I have come to the understanding that sports is an inseparable part of who I am. While I have been a lifelong athlete, I have realized that my true passion lies in studying sports, more so than taking a part in them. This acknowledgement has motivated me to pursue some interesting side gigs - European football analysis and Sabermetrics. This is a chance to flex my background in econometrics to drive real-time sports innovation."
   },
   {
     "objectID": "macro_workbook.html",
@@ -95,21 +81,21 @@
     "href": "macro_workbook.html#introduction",
     "title": "macro_workbook",
     "section": "Introduction",
-    "text": "Introduction\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nAttaching package: 'zoo'\n\n\nThe following objects are masked from 'package:base':\n\n    as.Date, as.Date.numeric\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.2     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nRegistered S3 method overwritten by 'quantmod':\n  method            from\n  as.zoo.data.frame zoo \n\n── Attaching core tidyquant packages ─────────────────────── tidyquant 1.0.11 ──\n✔ PerformanceAnalytics 2.0.8      ✔ TTR                  0.24.4\n✔ quantmod             0.4.28     ✔ xts                  0.14.1\n── Conflicts ────────────────────────────────────────── tidyquant_conflicts() ──\n✖ zoo::as.Date()                 masks base::as.Date()\n✖ zoo::as.Date.numeric()         masks base::as.Date.numeric()\n✖ dplyr::filter()                masks stats::filter()\n✖ xts::first()                   masks dplyr::first()\n✖ dplyr::lag()                   masks stats::lag()\n✖ xts::last()                    masks dplyr::last()\n✖ PerformanceAnalytics::legend() masks graphics::legend()\n✖ quantmod::summary()            masks base::summary()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+    "text": "Introduction"
   },
   {
     "objectID": "macro_workbook.html#productivity-growth",
     "href": "macro_workbook.html#productivity-growth",
     "title": "macro_workbook",
     "section": "Productivity Growth",
-    "text": "Productivity Growth\nFred version\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: Removed 4 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
+    "text": "Productivity Growth\nFred version\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
   },
   {
     "objectID": "macro_workbook.html#short-term-debt-cycle",
     "href": "macro_workbook.html#short-term-debt-cycle",
     "title": "macro_workbook",
     "section": "Short-Term Debt Cycle",
-    "text": "Short-Term Debt Cycle\n\nCredit Growth\nTotal Credit to Private Sector\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nHousehold Credit\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nNonfinancial corporate debt\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt/Nominal GDP\n\n\nWarning: Removed 7 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nNominal gdp raw level\n\n\nWarning: Removed 4 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt Outstanding raw level\n\n\n\n\n\n\n\n\n\n\n\nPMI\nNeed to work on this part\n\n\nYield Curve\n\n\n\n\n\n\n\n\n\n2yr and 10yr Raw level\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nU-3 Unemployment (most basic)\n\n\n\n\n\n\n\n\n\nLabor-force participation\n\n\n\n\n\n\n\n\n\nEmployment-population ratio\n\n\n\n\n\n\n\n\n\nBroad Unemployment (U‑6)"
+    "text": "Short-Term Debt Cycle\n\nCredit Growth\nTotal Credit to Private Sector\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nHousehold Credit\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nNonfinancial corporate debt\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt/Nominal GDP\n\n\n\n\n\n\n\n\n\nNominal gdp raw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt Outstanding raw level\n\n\n\n\n\n\n\n\n\n\n\nPMI\nNeed to work on this part\n\n\nYield Curve\n\n\n\n\n\n\n\n\n\n2yr and 10yr Raw level\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nU-3 Unemployment (most basic)\n\n\n\n\n\n\n\n\n\nLabor-force participation\n\n\n\n\n\n\n\n\n\nEmployment-population ratio\n\n\n\n\n\n\n\n\n\nBroad Unemployment (U‑6)"
   },
   {
     "objectID": "macro_workbook.html#long-term-debt-cycle",
