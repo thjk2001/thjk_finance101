@@ -1,12 +1,14 @@
 ---
-title: "Macro Dashboard"
+title: "macro_workbook"
 format: html
 editor: source
 ---
 
+Simply the workbook for everything
+
 ## Introduction
 
-```{r}
+```{r, echo = FALSE}
 library(fredr)
 library(dplyr)
 library(zoo)
@@ -24,7 +26,7 @@ fredr_set_key("da613fe30b4aba9f426b578cc2e5d192")
 ## Productivity Growth
 
 Fred version
-```{r}
+```{r, echo = FALSE}
 # Download Real GDP per capita data from FRED
 Fred_gdp_per_capita <- tq_get("A939RX0Q048SBEA", get = "economic.data", from = "1947-01-01")
 
@@ -43,7 +45,7 @@ Fred_gdp_per_capita %>%
 ```
 
 Maddison Project version
-```{r}
+```{r, echo = FALSE}
 
 # Read GDPpc sheet using the correct header row (row 3)
 maddison_us_gdppc2023 <- read_excel("maddison_project_2023db.xlsx", sheet = "GDPpc", skip = 2)
@@ -72,7 +74,7 @@ ggplot(us_gdp_yoy, aes(x = year, y = yoy_growth)) +
 
 
 Supplement: Real GPD per capita (actual figures)
-```{r}
+```{r, echo = FALSE}
 library(ggplot2)
 
 # Plot real GDP per capita (level, not YoY)
@@ -93,7 +95,7 @@ ggplot(us_gdp_yoy, aes(x = year, y = real_gdp_per_capita)) +
 ### Credit Growth
 
 Total Credit to Private Sector
-```{r}
+```{r, echo = FALSE}
 # Total Credit to Private Non-Financial Sector
 total_credit <- fredr(
   series_id = "TOTALSL",
@@ -539,3 +541,5 @@ ggplot(fed_outlays, aes(x = date, y = value)) +
   theme_minimal()
 
 ```
+
+

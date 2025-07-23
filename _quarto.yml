@@ -32,5 +32,6 @@ format:
     theme: cosmo
     toc: true
     css: styles.css
+    echo: false
 
 editor: source
