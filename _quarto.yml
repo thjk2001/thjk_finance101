@@ -32,8 +32,7 @@ format:
     theme: cosmo
     toc: true
     css: styles.css
-    echo: true
-    code-fold: true
+    echo: false
     warning: false
     message: false
 
