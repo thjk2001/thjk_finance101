@@ -543,3 +543,87 @@ ggplot(fed_outlays, aes(x = date, y = value)) +
 ```
 
 
+
+### Monetary Response Capacity
+
+Fed Balance Sheet Size
+```{r}
+# Fed Balance Sheet Size (WALCL)
+fed_balance_sheet <- fredr(
+  series_id = "WALCL",
+  observation_start = as.Date("2002-01-01")  # earlier data is less complete
+)
+
+ggplot(fed_balance_sheet, aes(x = date, y = value)) +
+  geom_line(color = "steelblue", size = 1) +
+  labs(title = "Fed Balance Sheet Size",
+       y = "Millions USD", x = "Date") +
+  theme_minimal()
+
+```
+
+
+M2 Money Supply
+```{r}
+# M2 Money Supply
+m2_supply <- fredr(
+  series_id = "M2SL",
+  observation_start = as.Date("1959-01-01")
+)
+
+ggplot(m2_supply, aes(x = date, y = value)) +
+  geom_line(color = "darkgreen", size = 1) +
+  labs(title = "M2 Money Supply",
+       y = "Billions USD", x = "Date") +
+  theme_minimal()
+
+```
+
+
+Core PCE Inflation
+```{r}
+core_pce <- fredr(
+  series_id = "PCEPILFE",
+  observation_start = as.Date("1959-01-01")
+)
+
+# Calculate YoY inflation
+core_pce <- core_pce %>%
+  mutate(
+    core_pce_yoy = (value / lag(value, 12) - 1) * 100
+  ) %>%
+  filter(!is.na(core_pce_yoy))
+
+# Plot YoY Core PCE inflation
+ggplot(core_pce, aes(x = date, y = core_pce_yoy)) +
+  geom_line(color = "firebrick", size = 1) +
+  labs(
+    title = "Core PCE Inflation (YoY)",
+    x = "Date",
+    y = "Percent Change (YoY)",
+    caption = "Source: FRED (PCEPILFE)"
+  ) +
+  theme_minimal()
+```
+
+
+CPI YoY Inflation
+```{r}
+# CPI YoY Inflation
+cpi <- fredr(
+  series_id = "CPIAUCSL",
+  observation_start = as.Date("1947-01-01")
+) %>%
+  mutate(
+    cpi_yoy = (value / lag(value, 12) - 1) * 100
+  ) %>%
+  filter(!is.na(cpi_yoy))
+
+ggplot(cpi, aes(x = date, y = cpi_yoy)) +
+  geom_line(color = "orange", size = 1) +
+  labs(title = "CPI YoY Inflation",
+       y = "% YoY", x = "Date") +
+  theme_minimal()
+
+```
+
