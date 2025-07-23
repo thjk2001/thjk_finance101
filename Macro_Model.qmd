@@ -7,7 +7,7 @@ editor: source
 
 ## Introduction
 
-```{r}
+```{r, echo = FALSE}
 library(fredr)
 library(dplyr)
 library(zoo)
@@ -25,7 +25,7 @@ fredr_set_key("da613fe30b4aba9f426b578cc2e5d192")
 ## Productivity Growth
 
 Fred version
-```{r}
+```{r, echo = FALSE}
 # Download Real GDP per capita data from FRED
 Fred_gdp_per_capita <- tq_get("A939RX0Q048SBEA", get = "economic.data", from = "1947-01-01")
 
@@ -44,10 +44,7 @@ Fred_gdp_per_capita %>%
 ```
 
 Maddison Project version
-```{r}
-library(readxl)
-library(dplyr)
-library(ggplot2)
+```{r, echo = FALSE}
 
 # Read GDPpc sheet using the correct header row (row 3)
 maddison_us_gdppc2023 <- read_excel("maddison_project_2023db.xlsx", sheet = "GDPpc", skip = 2)
@@ -94,7 +91,350 @@ ggplot(us_gdp_yoy, aes(x = year, y = real_gdp_per_capita)) +
 
 ## Short-Term Debt Cycle
 
-```{r}
+### Credit Growth
+
+Total Credit to Private Sector
+```{r, echo = FALSE}
+# Total Credit to Private Non-Financial Sector
+total_credit <- fredr(
+  series_id = "TOTALSL",
+  observation_start = as.Date("1946-01-01")
+)
+
+total_credit <- total_credit %>%
+  mutate(
+    yoy_growth = (value / lag(value, 4) - 1) * 100
+  ) %>%
+  filter(!is.na(yoy_growth))
+
+# Plot
+ggplot(total_credit, aes(x = date, y = yoy_growth)) +
+  geom_line(color = "steelblue", size = 1) +
+  labs(
+    title = "YoY Growth: Total Credit to Private Sector",
+    subtitle = "FRED Series: TOTALSL",
+    x = "Date", y = "Year-over-Year Growth (%)"
+  ) +
+  theme_minimal()
 
 ```
+
+Raw level
+```{r}
+# Plot level of Total Credit to Private Sector
+ggplot(total_credit, aes(x = date, y = value)) +
+  geom_line(color = "steelblue", size = 1) +
+  labs(
+    title = "Total Credit to Private Non-Financial Sector (Level)",
+    subtitle = "FRED Series: TOTALSL",
+    x = "Date", y = "Billions of USD"
+  ) +
+  theme_minimal()
+
+```
+
+
+
+Household Credit
+```{r}
+# Household Credit (Consumer Credit Outstanding)
+household_credit <- fredr(
+  series_id = "HCCSDODNS",
+  observation_start = as.Date("1946-01-01")
+)
+
+household_credit <- household_credit %>%
+  mutate(
+    yoy_growth = (value / lag(value, 4) - 1) * 100
+  ) %>%
+  filter(!is.na(yoy_growth))
+
+# Plot
+ggplot(household_credit, aes(x = date, y = yoy_growth)) +
+  geom_line(color = "darkred", size = 1) +
+  labs(
+    title = "YoY Growth: Household Credit",
+    subtitle = "FRED Series: HCCSDODNS",
+    x = "Date", y = "Year-over-Year Growth (%)"
+  ) +
+  theme_minimal()
+
+```
+
+Raw level
+```{r}
+# Plot level of Household Credit
+ggplot(household_credit, aes(x = date, y = value)) +
+  geom_line(color = "darkred", size = 1) +
+  labs(
+    title = "Household Credit Outstanding (Level)",
+    subtitle = "FRED Series: HCCSDODNS",
+    x = "Date", y = "Billions of USD"
+  ) +
+  theme_minimal()
+
+```
+
+
+
+Nonfinancial corporate debt
+```{r}
+# Nonfinancial Corporate Credit
+corporate_credit <- fredr(
+  series_id = "BCNSDODNS",
+  observation_start = as.Date("1946-01-01")
+)
+
+corporate_credit <- corporate_credit %>%
+  mutate(
+    yoy_growth = (value / lag(value, 4) - 1) * 100
+  ) %>%
+  filter(!is.na(yoy_growth))
+
+# Plot
+ggplot(corporate_credit, aes(x = date, y = yoy_growth)) +
+  geom_line(color = "darkgreen", size = 1) +
+  labs(
+    title = "YoY Growth: Nonfinancial Corporate Credit",
+    subtitle = "FRED Series: BCNSDODNS",
+    x = "Date", y = "Year-over-Year Growth (%)"
+  ) +
+  theme_minimal()
+
+```
+
+Raw level
+```{r}
+# Plot level of Nonfinancial Corporate Debt
+ggplot(corporate_credit, aes(x = date, y = value)) +
+  geom_line(color = "darkgreen", size = 1) +
+  labs(
+    title = "Nonfinancial Corporate Debt Outstanding (Level)",
+    subtitle = "FRED Series: BCNSDODNS",
+    x = "Date", y = "Billions of USD"
+  ) +
+  theme_minimal()
+
+```
+
+
+
+
+Total Credit Market Debt/Nominal GDP
+```{r}
+# Get Total Credit Market Debt Owed
+tcmdo <- fredr(
+  series_id = "TCMDO",
+  observation_start = as.Date("1952-01-01")
+)
+
+# Get Nominal GDP
+nom_gdp <- fredr(
+  series_id = "GDP",
+  observation_start = as.Date("1952-01-01")
+)
+
+# Join & Calculate Debt-to-GDP Ratio
+debt_gdp <- tcmdo %>%
+  select(date, debt = value) %>%
+  inner_join(
+    nom_gdp %>% select(date, gdp = value),
+    by = "date"
+  ) %>%
+  mutate(
+    debt_to_gdp = (debt / gdp) * 100
+  )
+
+# Plot
+ggplot(debt_gdp, aes(x = date, y = debt_to_gdp)) +
+  geom_line(color = "purple", size = 1) +
+  labs(
+    title = "Private Sector Debt to GDP Ratio",
+    subtitle = "TCMDO / GDP",
+    x = "Date", y = "Debt-to-GDP (%)"
+  ) +
+  theme_minimal()
+
+```
+
+Nominal gdp raw level
+```{r}
+# Plot level of Nominal GDP
+ggplot(nom_gdp, aes(x = date, y = value)) +
+  geom_line(color = "dodgerblue4", size = 1) +
+  labs(
+    title = "US Nominal GDP (Level)",
+    subtitle = "FRED Series: GDP",
+    x = "Date", y = "Billions of USD (Nominal)"
+  ) +
+  theme_minimal()
+
+```
+
+Total Credit Market Debt Outstanding raw level
+```{r}
+# Plot level of Total Credit Market Debt
+ggplot(tcmdo, aes(x = date, y = value)) +
+  geom_line(color = "orchid4", size = 1) +
+  labs(
+    title = "Total Credit Market Debt Outstanding (Level)",
+    subtitle = "FRED Series: TCMDO",
+    x = "Date", y = "Billions of USD"
+  ) +
+  theme_minimal()
+
+```
+
+
+### PMI
+
+Need to work on this part
+
+
+
+### Yield Curve
+
+```{r}
+# Load required package
+library(fredr)
+library(ggplot2)
+
+# Load 10y–2y yield spread
+yield_curve <- fredr(
+  series_id = "T10Y2Y",
+  observation_start = as.Date("1976-01-01")
+)
+
+# Plot the yield curve
+ggplot(yield_curve, aes(x = date, y = value)) +
+  geom_line(color = "darkred", size = 1) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray40") +
+  labs(
+    title = "10-Year Minus 2-Year Treasury Yield Spread",
+    subtitle = "Source: FRED (T10Y2Y)",
+    x = "Date", y = "Yield Spread (%)"
+  ) +
+  theme_minimal()
+
+```
+
+2yr and 10yr Raw level
+```{r}
+# Load both yield series
+yield_10y <- fredr(
+  series_id = "GS10",
+  observation_start = as.Date("1976-06-01")  # align with GS2 start date
+)
+
+yield_2y <- fredr(
+  series_id = "GS2",
+  observation_start = as.Date("1976-06-01")
+)
+
+# Combine into one data frame
+library(dplyr)
+
+yield_combined <- bind_rows(
+  yield_10y %>% mutate(term = "10-Year"),
+  yield_2y %>% mutate(term = "2-Year")
+)
+
+# Plot both lines
+ggplot(yield_combined, aes(x = date, y = value, color = term)) +
+  geom_line(size = 1) +
+  labs(
+    title = "2-Year vs. 10-Year U.S. Treasury Yields",
+    subtitle = "FRED Series: GS2 and GS10 (Constant Maturity Rates)",
+    x = "Date", y = "Yield (%)",
+    color = "Maturity"
+  ) +
+  theme_minimal()
+
+```
+
+
+### Unemployment
+
+U-3 Unemployment (most basic)
+```{r}
+# Unemployment Rate (U‑3)
+unrate <- fredr(
+  series_id = "UNRATE",
+  observation_start = as.Date("1948-01-01")
+)
+
+ggplot(unrate, aes(x = date, y = value)) +
+  geom_line(color = "steelblue", size = 1) +
+  labs(
+    title = "U‑3 Unemployment Rate",
+    subtitle = "FRED Series: UNRATE",
+    x = "Date", y = "Percent"
+  ) +
+  theme_minimal()
+
+```
+
+
+Labor-force participation
+```{r}
+# Labor‑Force Participation Rate
+lf_part <- fredr(
+  series_id = "CIVPART",
+  observation_start = as.Date("1948-01-01")
+)
+
+ggplot(lf_part, aes(x = date, y = value)) +
+  geom_line(color = "darkgreen", size = 1) +
+  labs(
+    title = "Labor‑Force Participation Rate",
+    subtitle = "FRED Series: CIVPART",
+    x = "Date", y = "Percent"
+  ) +
+  theme_minimal()
+
+```
+
+
+Employment-population ratio
+```{r}
+# Employment‑to‑Population Ratio
+emp_ratio <- fredr(
+  series_id = "EMRATIO",
+  observation_start = as.Date("1948-01-01")
+)
+
+ggplot(emp_ratio, aes(x = date, y = value)) +
+  geom_line(color = "purple", size = 1) +
+  labs(
+    title = "Employment‑Population Ratio",
+    subtitle = "FRED Series: EMRATIO",
+    x = "Date", y = "Percent"
+  ) +
+  theme_minimal()
+
+```
+
+
+Broad Unemployment (U‑6)
+```{r}
+# U‑6 Unemployment Rate (broader measure)
+u6rate <- fredr(
+  series_id = "U6RATE",
+  observation_start = as.Date("1994-01-01")  # first year available
+)
+
+ggplot(u6rate, aes(x = date, y = value)) +
+  geom_line(color = "firebrick", size = 1) +
+  labs(
+    title = "U‑6 Unemployment Rate",
+    subtitle = "FRED Series: U6RATE",
+    x = "Date", y = "Percent"
+  ) +
+  theme_minimal()
+
+```
+
+
+## Long-term debt cycle
+
 
