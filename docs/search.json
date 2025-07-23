@@ -42,18 +42,25 @@
     "text": "Military Experience\nRepublic of Korea Army - 2nd Corps Headquarters"
   },
   {
+    "objectID": "Macro_Model.html",
+    "href": "Macro_Model.html",
+    "title": "Macro Dashboard",
+    "section": "",
+    "text": "Real GDP per capita (1947-2025)\n\n\n\n\n\n\n\n\n\nReal GDP per capita %YOY (1947-2025)\n\n\n\n\n\n\n\n\n\nMaddison Project: Real GDP per capita %YOY (1800-2025)\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
+  },
+  {
     "objectID": "Macro_Model.html#productivity-growth",
     "href": "Macro_Model.html#productivity-growth",
     "title": "Macro Dashboard",
-    "section": "Productivity Growth",
-    "text": "Productivity Growth\nFred version\n\n\n\n\n\n\n\n\n\nMaddison Project version\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
+    "section": "",
+    "text": "Real GDP per capita (1947-2025)\n\n\n\n\n\n\n\n\n\nReal GDP per capita %YOY (1947-2025)\n\n\n\n\n\n\n\n\n\nMaddison Project: Real GDP per capita %YOY (1800-2025)\n\n\n\n\n\n\n\n\n\nSupplement: Real GPD per capita (actual figures)"
   },
   {
     "objectID": "Macro_Model.html#short-term-debt-cycle",
     "href": "Macro_Model.html#short-term-debt-cycle",
     "title": "Macro Dashboard",
     "section": "Short-Term Debt Cycle",
-    "text": "Short-Term Debt Cycle\n\nCredit Growth\nTotal Credit to Private Sector\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nHousehold Credit\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nNonfinancial corporate debt\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt/Nominal GDP\n\n\n\n\n\n\n\n\n\nNominal gdp raw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt Outstanding raw level\n\n\n\n\n\n\n\n\n\n\n\nPMI\nNeed to work on this part\n\n\nYield Curve\n\n\n\n\n\n\n\n\n\n2yr and 10yr Raw level\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nU-3 Unemployment (most basic)\n\n\n\n\n\n\n\n\n\nLabor-force participation\n\n\n\n\n\n\n\n\n\nEmployment-population ratio\n\n\n\n\n\n\n\n\n\nBroad Unemployment (U‑6)"
+    "text": "Short-Term Debt Cycle\n\nCredit Growth\nTotal Credit to Private Sector %YOY (1943-2025) + Tracks the amount of outstanding credit (loans + debt securities) held by households and nonfinancial corporations + Excludes government and financial-sector borrowing\n\n\n\n\n\n\n\n\n\nTotal Credit to Private Sector (1943-2025)\n\n\n\n\n\n\n\n\n\nHousehold Credit %YOY\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nNonfinancial corporate debt\n\n\n\n\n\n\n\n\n\nRaw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt/Nominal GDP\n\n\n\n\n\n\n\n\n\nNominal gdp raw level\n\n\n\n\n\n\n\n\n\nTotal Credit Market Debt Outstanding raw level\n\n\n\n\n\n\n\n\n\n\n\nPMI\nNeed to work on this part\n\n\nYield Curve\n\n\n\n\n\n\n\n\n\n2yr and 10yr Raw level\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nU-3 Unemployment (most basic)\n\n\n\n\n\n\n\n\n\nLabor-force participation\n\n\n\n\n\n\n\n\n\nEmployment-population ratio\n\n\n\n\n\n\n\n\n\nBroad Unemployment (U‑6)"
   },
   {
     "objectID": "Macro_Model.html#long-term-debt-cycle",
