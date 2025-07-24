@@ -19,6 +19,8 @@ library(tidyquant)
 fredr_set_key("da613fe30b4aba9f426b578cc2e5d192")
 ```
 
+# Big Fources
+
 
 ## Productivity Growth
 
@@ -812,6 +814,11 @@ ggplot(fed_outlays_gdpratio, aes(x = date, y = value)) +
 ### Monetary Response Capacity
 
 **Fed Balance Sheet Size**
+
++ Total holdings of assets by the Federal Reserve (Treasuries, MBS, repos, etc.)
++ A proxy for the degree of monetary intervention or liquidity support
++ Expands during crises: QE, bailouts, asset purchases
++ Larger balance sheet = less policy room (future QE becomes harder without inflation or financial distortions)
 ```{r}
 # Fed Balance Sheet Size (WALCL)
 fed_balance_sheet <- fredr(
@@ -822,33 +829,86 @@ fed_balance_sheet <- fredr(
 ggplot(fed_balance_sheet, aes(x = date, y = value)) +
   geom_line(color = "steelblue", size = 1) +
   labs(title = "Fed Balance Sheet Size",
+       subtitle = "WALCL | Weekly | Millions of USD",
        y = "Millions USD", x = "Date") +
   theme_minimal()
 
 ```
 
+Fed Balance Sheet YOY
+```{r}
+# Calculate YoY growth for monthly Fed balance sheet
+fed_balance_sheet_yoy <- fed_balance_sheet %>%
+  mutate(yoy = (value / lag(value, 12) - 1) * 100) %>%
+  filter(!is.na(yoy))
+
+# Plot YoY
+ggplot(fed_balance_sheet_yoy, aes(x = date, y = yoy)) +
+  geom_line(color = "steelblue", size = 1) +
+  labs(
+    title = "Federal Reserve Balance Sheet (YoY Growth)",
+    subtitle = "WALCL | Monthly Year-over-Year Change (%)",
+    x = "Date", y = "YoY Growth (%)"
+  ) +
+  theme_minimal()
+
+```
+
+
+
 
 **M2 Money Supply**
+
++ Includes: M1 (cash + demand deposits) plus savings deposits, time deposits < $100K, money market funds
++ Proxy for liquidity and money creation
++ Limitation: Doesn’t directly track credit or shadow banking
 ```{r}
 # M2 Money Supply
 m2_supply <- fredr(
   series_id = "M2SL",
+  frequency = "m",
   observation_start = as.Date("1959-01-01")
 )
 
 ggplot(m2_supply, aes(x = date, y = value)) +
   geom_line(color = "darkgreen", size = 1) +
   labs(title = "M2 Money Supply",
+       subtitle = "M2SL | Monthly | Billions of USD",
        y = "Billions USD", x = "Date") +
   theme_minimal()
 
 ```
 
+M2 YOY
+```{r}
+# Calculate YoY growth for M2 money supply
+m2_supply_yoy <- m2_supply %>%
+  mutate(yoy = (value / lag(value, 12) - 1) * 100) %>%  # 12 months = 1 year
+  filter(!is.na(yoy))
+
+# Plot YoY
+ggplot(m2_supply_yoy, aes(x = date, y = yoy)) +
+  geom_line(color = "forestgreen", size = 1) +
+  labs(
+    title = "M2 Money Supply (YoY Growth)",
+    subtitle = "M2SL | Monthly Year-over-Year Change (%)",
+    x = "Date", y = "YoY Growth (%)"
+  ) +
+  theme_minimal()
+
+```
+
+
 
 **Core PCE Inflation**
+
++ Fed’s preferred inflation gauge (Tracks consumption inflation excluding volatile food and energy prices)
++ Direct input to monetary policy decisions. More stable and forward-looking than headline CPI
++ 2% target
 ```{r}
 core_pce <- fredr(
   series_id = "PCEPILFE",
+  frequency = "m",
   observation_start = as.Date("1959-01-01")
 )
 
@@ -864,6 +924,7 @@ ggplot(core_pce, aes(x = date, y = core_pce_yoy)) +
   geom_line(color = "firebrick", size = 1) +
   labs(
     title = "Core PCE Inflation (YoY)",
+    subtitle = "PCEPILFE | Monthly | Year-over-Year (%)",
     x = "Date",
     y = "Percent Change (YoY)",
     caption = "Source: FRED (PCEPILFE)"
@@ -873,10 +934,15 @@ ggplot(core_pce, aes(x = date, y = core_pce_yoy)) +
 
 
 **CPI YoY Inflation**
+
++ Traditional, well-known headline inflation measure
++ Tracks changes in prices paid by urban consumers for a fixed basket of goods/services
++ Key driver of wage negotiations, cost-of-living adjustments. While not the Fed's official target, CPI shocks strongly influence public inflation expectations
 ```{r}
 # CPI YoY Inflation
 cpi <- fredr(
   series_id = "CPIAUCSL",
+  frequency = "m",
   observation_start = as.Date("1947-01-01")
 ) %>%
   mutate(
@@ -887,9 +953,56 @@ cpi <- fredr(
 ggplot(cpi, aes(x = date, y = cpi_yoy)) +
   geom_line(color = "orange", size = 1) +
   labs(title = "CPI YoY Inflation",
+       subtitle = "CPIAUCSL | Monthly | Year-over-Year (%)",
        y = "% YoY", x = "Date") +
   theme_minimal()
 
 ```
 
 
+
+# Three Equilibria
+
+1. Debt growth is in line with income growth that is required to service the debts
+2. Economic capacity utilization is neither too high nor too low
+3. Projected returns of equities are above the projected returns of bonds which are above the projected returns of cash by appropriate risk premiums
+
+
+## Debt Growth vs Income Growth
+
+**Household level:**
+
++ Household Debt / Disposable Income
++ Household Debt Service Ratio: interest + principal payments as % of disposable income
+
+
+**Corporate Level**
+
++ Corporate Debt / EBITDA
++ Corporate Debt / Net Profit
++ Corporate Debt / Revenue
++ Corporate Debt / EBIT
++ Corporate Debt Service Ratio: interest payments as % of EBITDA or profit
+
+
+**Federal Level**
+
++ Public Debt / Nominal GDP
++ Interest Payments / Federal Receipts
+
+
+## Capacity Utilization
+
++ Capacity Utilization Rate (CAPUTLB00004SQ)
++ Unemployment rate vs. natural rate
++ Output gap (actual GDP vs. potential GDP)
+
+
+
+## Relationship between Projected Risk Premiums of Different Asset Classes
+
++ Equity risk premium = S&P 500 earnings yield − 10Y Treasury yield
++ Bond term premium = 10Y − 2Y Treasury yield
++ Corp. bonds vs Treasuries
++ 30Y, 10Y, 5Y, 2Y spreads
++ Cash return = Fed Funds Rate or 3-month T-bill yield

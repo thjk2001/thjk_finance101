@@ -150,7 +150,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#productivity-growth" id="toc-productivity-growth" class="nav-link active" data-scroll-target="#productivity-growth">Productivity Growth</a></li>
+  <li><a href="#big-fources" id="toc-big-fources" class="nav-link active" data-scroll-target="#big-fources">Big Fources</a>
+  <ul class="collapse">
+  <li><a href="#productivity-growth" id="toc-productivity-growth" class="nav-link" data-scroll-target="#productivity-growth">Productivity Growth</a></li>
   <li><a href="#short-term-debt-cycle" id="toc-short-term-debt-cycle" class="nav-link" data-scroll-target="#short-term-debt-cycle">Short-Term Debt Cycle</a>
   <ul class="collapse">
   <li><a href="#credit-growth" id="toc-credit-growth" class="nav-link" data-scroll-target="#credit-growth">Credit Growth</a></li>
@@ -163,6 +165,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#leverage-metrics" id="toc-leverage-metrics" class="nav-link" data-scroll-target="#leverage-metrics">Leverage Metrics</a></li>
   <li><a href="#gov-fiscal-condition" id="toc-gov-fiscal-condition" class="nav-link" data-scroll-target="#gov-fiscal-condition">Gov Fiscal Condition</a></li>
   <li><a href="#monetary-response-capacity" id="toc-monetary-response-capacity" class="nav-link" data-scroll-target="#monetary-response-capacity">Monetary Response Capacity</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#three-equilibria" id="toc-three-equilibria" class="nav-link" data-scroll-target="#three-equilibria">Three Equilibria</a>
+  <ul class="collapse">
+  <li><a href="#debt-growth-vs-income-growth" id="toc-debt-growth-vs-income-growth" class="nav-link" data-scroll-target="#debt-growth-vs-income-growth">Debt Growth vs Income Growth</a></li>
+  <li><a href="#capacity-utilization" id="toc-capacity-utilization" class="nav-link" data-scroll-target="#capacity-utilization">Capacity Utilization</a></li>
+  <li><a href="#relationship-between-projected-risk-premiums-of-different-asset-classes" id="toc-relationship-between-projected-risk-premiums-of-different-asset-classes" class="nav-link" data-scroll-target="#relationship-between-projected-risk-premiums-of-different-asset-classes">Relationship between Projected Risk Premiums of Different Asset Classes</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -189,6 +198,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="big-fources" class="level1">
+<h1>Big Fources</h1>
 <section id="productivity-growth" class="level2">
 <h2 class="anchored" data-anchor-id="productivity-growth">Productivity Growth</h2>
 <p><strong>Real GDP per capita (1947-2025)</strong></p>
@@ -609,6 +620,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="monetary-response-capacity" class="level3">
 <h3 class="anchored" data-anchor-id="monetary-response-capacity">Monetary Response Capacity</h3>
 <p><strong>Fed Balance Sheet Size</strong></p>
+<ul>
+<li>Total holdings of assets by the Federal Reserve (Treasuries, MBS, repos, etc.)</li>
+<li>A proxy for the degree of monetary intervention or liquidity support</li>
+<li>Expands during crises: QE, bailouts, asset purchases</li>
+<li>Larger balance sheet = less policy room (future QE becomes harder without inflation or financial distortions)</li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -618,7 +635,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><strong>M2 Money Supply</strong></p>
+<p>Fed Balance Sheet YOY</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -628,7 +645,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><strong>Core PCE Inflation</strong></p>
+<p><strong>M2 Money Supply</strong></p>
+<ul>
+<li>Includes: M1 (cash + demand deposits) plus savings deposits, time deposits &lt; $100K, money market funds</li>
+<li>Proxy for liquidity and money creation</li>
+<li>Limitation: Doesn’t directly track credit or shadow banking</li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -638,7 +660,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><strong>CPI YoY Inflation</strong></p>
+<p>M2 YOY</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -648,6 +670,84 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p><strong>Core PCE Inflation</strong></p>
+<ul>
+<li>Fed’s preferred inflation gauge (Tracks consumption inflation excluding volatile food and energy prices)</li>
+<li>Direct input to monetary policy decisions. More stable and forward-looking than headline CPI</li>
+<li>2% target</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Macro_Model_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>CPI YoY Inflation</strong></p>
+<ul>
+<li>Traditional, well-known headline inflation measure</li>
+<li>Tracks changes in prices paid by urban consumers for a fixed basket of goods/services</li>
+<li>Key driver of wage negotiations, cost-of-living adjustments. While not the Fed’s official target, CPI shocks strongly influence public inflation expectations</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Macro_Model_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="three-equilibria" class="level1">
+<h1>Three Equilibria</h1>
+<ol type="1">
+<li>Debt growth is in line with income growth that is required to service the debts</li>
+<li>Economic capacity utilization is neither too high nor too low</li>
+<li>Projected returns of equities are above the projected returns of bonds which are above the projected returns of cash by appropriate risk premiums</li>
+</ol>
+<section id="debt-growth-vs-income-growth" class="level2">
+<h2 class="anchored" data-anchor-id="debt-growth-vs-income-growth">Debt Growth vs Income Growth</h2>
+<p><strong>Household level:</strong></p>
+<ul>
+<li>Household Debt / Disposable Income</li>
+<li>Household Debt Service Ratio: interest + principal payments as % of disposable income</li>
+</ul>
+<p><strong>Corporate Level</strong></p>
+<ul>
+<li>Corporate Debt / EBITDA</li>
+<li>Corporate Debt / Net Profit</li>
+<li>Corporate Debt / Revenue</li>
+<li>Corporate Debt / EBIT</li>
+<li>Corporate Debt Service Ratio: interest payments as % of EBITDA or profit</li>
+</ul>
+<p><strong>Federal Level</strong></p>
+<ul>
+<li>Public Debt / Nominal GDP</li>
+<li>Interest Payments / Federal Receipts</li>
+</ul>
+</section>
+<section id="capacity-utilization" class="level2">
+<h2 class="anchored" data-anchor-id="capacity-utilization">Capacity Utilization</h2>
+<ul>
+<li>Capacity Utilization Rate (CAPUTLB00004SQ)</li>
+<li>Unemployment rate vs.&nbsp;natural rate</li>
+<li>Output gap (actual GDP vs.&nbsp;potential GDP)</li>
+</ul>
+</section>
+<section id="relationship-between-projected-risk-premiums-of-different-asset-classes" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-between-projected-risk-premiums-of-different-asset-classes">Relationship between Projected Risk Premiums of Different Asset Classes</h2>
+<ul>
+<li>Equity risk premium = S&amp;P 500 earnings yield − 10Y Treasury yield</li>
+<li>Bond term premium = 10Y − 2Y Treasury yield</li>
+<li>Corp.&nbsp;bonds vs Treasuries</li>
+<li>30Y, 10Y, 5Y, 2Y spreads</li>
+<li>Cash return = Fed Funds Rate or 3-month T-bill yield</li>
+</ul>
 
 
 </section>
